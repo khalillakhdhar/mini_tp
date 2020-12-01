@@ -11,4 +11,9 @@ public class DemoController {
 	public String getFoos(@RequestParam(required = false) String id) {
 	return "ID: " + id;
 	}
+	@GetMapping("/api2")
+	@ResponseBody
+	public String getting(@RequestParam(defaultValue = "test") String id) {
+	return "ID: " + id;
+	}
 }
